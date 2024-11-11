@@ -57,11 +57,15 @@ public class PlayerControls : MonoBehaviour
         if (jumpsRemaining > 0) {
             if (context.performed) {
                 float actualJumpPower = jumpPower;
-                // Reduce the force of consecutive jumps to feel more natural
-                if (jumpsRemaining < maxJumps) actualJumpPower *= .9f;
+                if (jumpsRemaining < maxJumps) {
+                    // Reduce the force of double jumps to feel more natural
+                    actualJumpPower *= .9f;
+                    animator.SetTrigger("doubleJump");
+                } else {
+                    animator.SetTrigger("jump");
+                }
 
                 rb.velocity = new Vector2(rb.velocity.x, actualJumpPower);
-                animator.SetTrigger("jump");
                 jumpsRemaining--;
             } else if (context.canceled) {
                 rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
@@ -88,6 +92,7 @@ public class PlayerControls : MonoBehaviour
         if (Physics2D.OverlapBox(groundCheckPos.position, groundCheckSize, 0, groundLayer))
         {
             jumpsRemaining = maxJumps;
+            animator.ResetTrigger("doubleJump");
         }
     }
     private void OnDrawGizmosSelected() {
