@@ -1,3 +1,2 @@
 TODO:
-    1. Implement movement/jumping animations
-    2. Finish all other playable characters
+    look for some sprites for the spells
