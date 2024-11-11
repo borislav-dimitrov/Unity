@@ -42,11 +42,11 @@ GameObject:
   - component: {fileID: 3658683809571061643}
   - component: {fileID: 7515110022521414564}
   - component: {fileID: 3213087111468341066}
-  - component: {fileID: 8631748932043127925}
   - component: {fileID: 2388840560338763836}
-  - component: {fileID: 3117762490175779950}
   - component: {fileID: 8421831630770616337}
   - component: {fileID: 8401798142736026760}
+  - component: {fileID: 5352923029054049130}
+  - component: {fileID: 7433350558617251481}
   m_Layer: 0
   m_Name: PlayerVirtualGuy
   m_TagString: Untagged
@@ -109,7 +109,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 357539919
-  m_SortingLayer: 5
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: -6367560908665664636, guid: 40de9a8703e2e5a47882b0b86451c741, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -149,23 +149,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8631748932043127925}
-        m_TargetAssemblyTypeName: PlayerControls, Assembly-CSharp
-        m_MethodName: Fire
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 67d3d8c5-ba77-46e8-9604-f61647bffce5
-    m_ActionName: BaseMovement/Fire[/Keyboard/f]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8631748932043127925}
+      - m_Target: {fileID: 5352923029054049130}
         m_TargetAssemblyTypeName: PlayerControls, Assembly-CSharp
         m_MethodName: Move
         m_Mode: 0
@@ -181,7 +165,7 @@ MonoBehaviour:
     m_ActionName: BaseMovement/Move[/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8631748932043127925}
+      - m_Target: {fileID: 5352923029054049130}
         m_TargetAssemblyTypeName: PlayerControls, Assembly-CSharp
         m_MethodName: Jump
         m_Mode: 0
@@ -195,38 +179,107 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 593cd7ab-5304-45a1-b8d1-eb462aab923d
     m_ActionName: BaseMovement/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7433350558617251481}
+        m_TargetAssemblyTypeName: PlayerActions, Assembly-CSharp
+        m_MethodName: Use
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 86339d62-8398-4f75-bd35-7b28b931a55e
+    m_ActionName: BaseMovement/Use[/Keyboard/f]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7433350558617251481}
+        m_TargetAssemblyTypeName: PlayerActions, Assembly-CSharp
+        m_MethodName: Spell1
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: afe544de-c1f1-4597-a124-dbc2574ed948
+    m_ActionName: BaseMovement/Spells[/Keyboard/q,/Keyboard/w,/Keyboard/e,/Keyboard/r,/Keyboard/t]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7433350558617251481}
+        m_TargetAssemblyTypeName: PlayerActions, Assembly-CSharp
+        m_MethodName: Spell2
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 355a141a-a1ce-4383-a591-5635335a9964
+    m_ActionName: BaseActionMap/Spell2[/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7433350558617251481}
+        m_TargetAssemblyTypeName: PlayerActions, Assembly-CSharp
+        m_MethodName: Spell3
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: df640f60-109d-4f8f-9ff5-b76d17487a72
+    m_ActionName: BaseActionMap/Spell3[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7433350558617251481}
+        m_TargetAssemblyTypeName: PlayerActions, Assembly-CSharp
+        m_MethodName: Spell4
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 517c0b9d-9b10-4fae-bade-2a212178404a
+    m_ActionName: BaseActionMap/Spell4[/Keyboard/r]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7433350558617251481}
+        m_TargetAssemblyTypeName: PlayerActions, Assembly-CSharp
+        m_MethodName: Spell5
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 08d0e1bb-0637-48ca-b1a3-465c5e674414
+    m_ActionName: BaseActionMap/Spell5[/Keyboard/t]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard
-  m_DefaultActionMap: BaseMovement
+  m_DefaultActionMap: BaseActionMap
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &8631748932043127925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4063319222681801910}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dc1ebe25f7dca84c9f68738f65d1e46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  move: {fileID: 8474246802374752449, guid: b89551afe4b426a4bbe7f5399eb0dd4c, type: 3}
-  fire: {fileID: -3949875647014638966, guid: b89551afe4b426a4bbe7f5399eb0dd4c, type: 3}
-  jump: {fileID: 3595647207664071811, guid: b89551afe4b426a4bbe7f5399eb0dd4c, type: 3}
-  jumpPower: 8
-  baseGravity: 2
-  maxFallSpeed: 18
-  fallSpeedMultiplier: 2
-  groundCheckPos: {fileID: 304293914816187262}
-  groundCheckSize: {x: 0.3, y: 0.05}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 1024
-  rb: {fileID: 2388840560338763836}
-  animator: {fileID: 8401798142736026760}
 --- !u!50 &2388840560338763836
 Rigidbody2D:
   serializedVersion: 4
@@ -253,42 +306,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!70 &3117762490175779950
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4063319222681801910}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.02, y: -0.09}
-  m_Size: {x: 0.55, y: 0.6}
-  m_Direction: 0
+  m_Constraints: 4
 --- !u!61 &8421831630770616337
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -355,3 +373,39 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5352923029054049130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4063319222681801910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dc1ebe25f7dca84c9f68738f65d1e46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  jumpPower: 8
+  baseGravity: 2
+  maxFallSpeed: 18
+  fallSpeedMultiplier: 2
+  groundCheckPos: {fileID: 304293914816187262}
+  groundCheckSize: {x: 0.3, y: 0.05}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  rb: {fileID: 2388840560338763836}
+  animator: {fileID: 8401798142736026760}
+--- !u!114 &7433350558617251481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4063319222681801910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab300eec13a957e41aabc6ff656f9a04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

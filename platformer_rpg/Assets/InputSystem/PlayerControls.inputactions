@@ -2,18 +2,9 @@
     "name": "PlayerControls",
     "maps": [
         {
-            "name": "BaseMovement",
+            "name": "BaseActionMap",
             "id": "993319da-3d1e-4d7a-a2ff-45584a510eb7",
             "actions": [
-                {
-                    "name": "Fire",
-                    "type": "Button",
-                    "id": "67d3d8c5-ba77-46e8-9604-f61647bffce5",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
                 {
                     "name": "Move",
                     "type": "PassThrough",
@@ -31,20 +22,63 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Use",
+                    "type": "Button",
+                    "id": "86339d62-8398-4f75-bd35-7b28b931a55e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Spell1",
+                    "type": "Button",
+                    "id": "afe544de-c1f1-4597-a124-dbc2574ed948",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Spell2",
+                    "type": "Button",
+                    "id": "355a141a-a1ce-4383-a591-5635335a9964",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Spell3",
+                    "type": "Button",
+                    "id": "df640f60-109d-4f8f-9ff5-b76d17487a72",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Spell4",
+                    "type": "Button",
+                    "id": "517c0b9d-9b10-4fae-bade-2a212178404a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Spell5",
+                    "type": "Button",
+                    "id": "08d0e1bb-0637-48ca-b1a3-465c5e674414",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
-                {
-                    "name": "",
-                    "id": "81804c2b-b4ad-4fca-b751-c16d069e4964",
-                    "path": "<Keyboard>/f",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "Fire",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
                 {
                     "name": "2D Vector",
                     "id": "d0dceec7-af1a-4729-837e-00d9f2684562",
@@ -141,6 +175,72 @@
                     "processors": "",
                     "groups": "",
                     "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "de56bb19-16f1-4cd6-9245-51465a487057",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Use",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "953b6179-a30b-4de9-9f9b-222adc996c94",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Spell1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "447f4504-5349-487a-a849-6e3b64adfdd7",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Spell2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7f873407-ba3c-413c-ad27-3c353bf1d765",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Spell3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "76d0c197-2cd8-403f-b450-b39a0ddd41f2",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Spell4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1561eff9-1108-4cb2-86eb-f03b84b2a196",
+                    "path": "<Keyboard>/t",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Spell5",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -9,14 +9,9 @@ public class PlayerControls : MonoBehaviour
     [Header("Movement")]
     public float moveSpeed = 5f;
     private Vector2 _movedDirection;
-    public InputActionReference move;
     float horizontalMovement;
 
-    [Header("Fire")]
-    public InputActionReference fire;
-
     [Header("Jump")]
-    public InputActionReference jump;
     public float jumpPower = 8f;
     int maxJumps = 2;
     int jumpsRemaining;
@@ -36,8 +31,6 @@ public class PlayerControls : MonoBehaviour
 
 
     private void Update() {
-        _movedDirection = move.action.ReadValue<Vector2>();
-
         Gravity();
         IsGrounded();
 
@@ -58,10 +51,6 @@ public class PlayerControls : MonoBehaviour
 
     public void Move(InputAction.CallbackContext context) {
         horizontalMovement = context.ReadValue<Vector2>().x;
-    }
-    public void Fire(InputAction.CallbackContext context)
-    {
-        Debug.Log("Fire");
     }
 
     public void Jump(InputAction.CallbackContext context) {
