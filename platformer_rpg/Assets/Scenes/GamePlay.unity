@@ -2359,7 +2359,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.512624, y: -1.6199999, z: -9.987727}
+  m_LocalPosition: {x: -0.512624, y: -0.07524812, z: -9.987727}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2584,7 +2584,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &1246162309
+--- !u!1001 &1196520069
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -2634,13 +2634,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4063319222681801910, guid: 782464501a6141646aa95c99c391cff0, type: 3}
       propertyPath: m_Name
-      value: PlayerVirtualGuy
+      value: Technomancer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4063319222681801910, guid: 782464501a6141646aa95c99c391cff0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 782464501a6141646aa95c99c391cff0, type: 3}
+--- !u!4 &1450544587 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5424702596548987551, guid: d01eb2f20eeb59846b8fcd17ac46464a, type: 3}
+  m_PrefabInstance: {fileID: 253001637256043543}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2000606773
 GameObject:
   m_ObjectHideFlags: 0
@@ -2981,7 +2990,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_Follow: {fileID: 1450544587}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 4.350177
@@ -3010,7 +3019,7 @@ Transform:
   m_GameObject: {fileID: 2092885819}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.512624, y: -2.62, z: -9.987727}
+  m_LocalPosition: {x: -0.512624, y: -1.0752481, z: -9.987727}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3032,6 +3041,63 @@ MonoBehaviour:
   m_Offset: {x: 0, y: 1, z: 0}
   m_ApplyAfter: 1
   m_PreserveComposition: 0
+--- !u!1001 &253001637256043543
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5424702596548987551, guid: d01eb2f20eeb59846b8fcd17ac46464a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.512624
+      objectReference: {fileID: 0}
+    - target: {fileID: 5424702596548987551, guid: d01eb2f20eeb59846b8fcd17ac46464a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.0752481
+      objectReference: {fileID: 0}
+    - target: {fileID: 5424702596548987551, guid: d01eb2f20eeb59846b8fcd17ac46464a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.012272883
+      objectReference: {fileID: 0}
+    - target: {fileID: 5424702596548987551, guid: d01eb2f20eeb59846b8fcd17ac46464a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5424702596548987551, guid: d01eb2f20eeb59846b8fcd17ac46464a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5424702596548987551, guid: d01eb2f20eeb59846b8fcd17ac46464a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5424702596548987551, guid: d01eb2f20eeb59846b8fcd17ac46464a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5424702596548987551, guid: d01eb2f20eeb59846b8fcd17ac46464a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5424702596548987551, guid: d01eb2f20eeb59846b8fcd17ac46464a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5424702596548987551, guid: d01eb2f20eeb59846b8fcd17ac46464a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9193872424941304280, guid: d01eb2f20eeb59846b8fcd17ac46464a, type: 3}
+      propertyPath: m_Name
+      value: Shaman
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d01eb2f20eeb59846b8fcd17ac46464a, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3040,4 +3106,5 @@ SceneRoots:
   - {fileID: 2079932140}
   - {fileID: 18044438}
   - {fileID: 2092885821}
-  - {fileID: 1246162309}
+  - {fileID: 1196520069}
+  - {fileID: 253001637256043543}
