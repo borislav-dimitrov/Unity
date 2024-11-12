@@ -46,6 +46,7 @@ public class PlayerCharactersController : MonoBehaviour
             currentCharacter.SetActive(false);
             RepositionAllCharacters(currentCharacter.transform.position);
             newCharacter.SetActive(true);
+            newCharacter.GetComponent<Rigidbody2D>().velocity = newCharacter.GetComponent<Rigidbody2D>().velocity;
             currentCharacter = newCharacter;
             playerControls.currentCharacterRB = currentCharacter.GetComponent<Rigidbody2D>();
             playerControls.animator = currentCharacter.GetComponent<Animator>();
