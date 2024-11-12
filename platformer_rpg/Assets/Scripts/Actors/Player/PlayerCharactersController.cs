@@ -11,14 +11,14 @@ public class PlayerCharactersController : MonoBehaviour
 
     public List<GameObject> playableCharacters;
     private GameObject currentCharacter;
-    private PlayerControls playerControls;
+    private PlayerMovement playerControls;
     private PlayerActions playerActions;
 
     // Start is called before the first frame update
     void Start()
     {
         currentCharacter = playableCharacters[0];
-        playerControls = transform.GetComponent<PlayerControls>();
+        playerControls = transform.GetComponent<PlayerMovement>();
         playerActions = transform.GetComponent<PlayerActions>();
         playerActions.playerCharController = this;
 
@@ -47,6 +47,7 @@ public class PlayerCharactersController : MonoBehaviour
             RepositionAllCharacters(currentCharacter.transform.position);
             newCharacter.SetActive(true);
             newCharacter.GetComponent<Rigidbody2D>().velocity = newCharacter.GetComponent<Rigidbody2D>().velocity;
+            newCharacter.transform.localScale = currentCharacter.transform.localScale;
             currentCharacter = newCharacter;
             playerControls.currentCharacterRB = currentCharacter.GetComponent<Rigidbody2D>();
             playerControls.animator = currentCharacter.GetComponent<Animator>();

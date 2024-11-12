@@ -1,7 +1,7 @@
 VirtualGuy -> Technomancer ->
 	Abilities:
 		Hack (play minigames for time) doors to open shorcuts/secret areas
-		Buffs that will persist on other characters as well
+		4 Buffs that will persist on other characters as well (2 offensive, 2 defensive) can only have one of a type at a time
 	Passives:
 		Low HP
 		Normal move speed
@@ -10,7 +10,7 @@ VirtualGuy -> Technomancer ->
 
 Ninja Frog -> Brawler ->
 	Abilities:
-		Null
+		Smash - high damage attack (with cast time) that can also break breakable objects
 	Passives:
 		More HP
 		More DMG
@@ -20,8 +20,11 @@ Ninja Frog -> Brawler ->
 
 Mask Dude -> Shaman ->
 	Abilities:
-		Totems (stationary) -> providing buffs to nearby allies (Player, summons)
-		Summon elemental (fire, water, earth, air) -> each elemental will have different mechanic
+		Summon elemental (fire, water, earth, air) -> Can have one elemental at time.
+            fire elemental - passive increasted damage to the elemental and the shaman
+            water elemental - passive health regen to the elemental and the shaman
+            earth elemental - passive increasted health to the elemental and the shaman
+            air elemental - passive increasted move speed to the elemental and the shaman
 	Passives:
 		Normal HP
 		Normal move speed
@@ -31,12 +34,10 @@ Mask Dude -> Shaman ->
 
 Pink Man(to be girl) -> Sorceress ->
 	Abilities:
-		Teleport -> Cooldown, short distance blink (can tele over bigger gaps)
+		Barrier -> Cooldown, block x incoming damage
 		Charm -> Cooldown, low damage, charm enemy
-		Frost Nova -> Cooldown, low damage, AoE freeze
-		Ice Barrier -> Cooldown, temporary shield (not persistent for other characters)
 		Fireball -> high damage, single target
-		Ice Lance -> normal damage, pierce 3 target
+		Frost Bolt -> normal damage, pierce 3 target
 	Passives:
 		Normal HP
 		Normal move speed

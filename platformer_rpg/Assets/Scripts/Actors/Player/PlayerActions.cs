@@ -39,10 +39,6 @@ public class PlayerActions : MonoBehaviour
         Debug.Log("Spell4");
     }
 
-    public void Spell5(InputAction.CallbackContext context) {
-        Debug.Log("Spell5");
-    }
-
     public void SwitchCharacter1(InputAction.CallbackContext context) {
         playerCharController.ChangeCharacter(0);
     }

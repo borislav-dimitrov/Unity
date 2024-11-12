@@ -1,8 +1,7 @@
 TODO:
+    add input maps for basic attack
     start working on spells
-        Teleport
+        Barrier
         Charm -> use pink fb
-        Frost Nova -> Done
-        Ice Barrier -> Done
-        Fireball -> Done
+        Fireball
         Ice Lance -> use blue fb
