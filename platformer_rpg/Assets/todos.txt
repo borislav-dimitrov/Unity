@@ -1,2 +1,9 @@
 TODO:
-    look for some sprites for the spells
+    1. implement character switching mechanic
+    2. start working on spells
+        Teleport
+        Charm -> use pink fb
+        Frost Nova -> Done
+        Ice Barrier -> Done
+        Fireball -> Done
+        Ice Lance -> use blue fb

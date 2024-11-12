@@ -65,6 +65,9 @@ TagManager:
   - name: Actors
     uniqueID: 357539919
     locked: 0
+  - name: Spells
+    uniqueID: 500501235
+    locked: 0
   - name: Front1
     uniqueID: 87667653
     locked: 0
