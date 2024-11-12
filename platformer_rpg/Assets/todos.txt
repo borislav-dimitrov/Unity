@@ -1,6 +1,7 @@
 TODO:
-    1. implement character switching mechanic
-    2. start working on spells
+    make the camera follow the object holding playable characters
+    implement character switching mechanic
+    start working on spells
         Teleport
         Charm -> use pink fb
         Frost Nova -> Done

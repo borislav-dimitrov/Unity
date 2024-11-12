@@ -26,7 +26,7 @@ public class PlayerControls : MonoBehaviour
     public Vector2 groundCheckSize = new Vector2(.3f, .05f);
     public LayerMask groundLayer;
 
-    public Rigidbody2D rb;
+    public Rigidbody2D currentCharacterRB;
     public Animator animator;
 
 
@@ -34,18 +34,18 @@ public class PlayerControls : MonoBehaviour
         Gravity();
         IsGrounded();
 
-        if (rb.velocity.x > 0) {
-            transform.localScale = new Vector3(1, 1, 1);
-        } else if (rb.velocity.x < 0) {
-            transform.localScale = new Vector3(-1, 1, 1);
+        if (currentCharacterRB.velocity.x > 0) {
+            currentCharacterRB.transform.localScale = new Vector3(1, 1, 1);
+        } else if (currentCharacterRB.velocity.x < 0) {
+            currentCharacterRB.transform.localScale = new Vector3(-1, 1, 1);
         }
-        animator.SetFloat("yVelocity", rb.velocity.y);
-        animator.SetFloat("magnitude", rb.velocity.magnitude);
+        animator.SetFloat("yVelocity", currentCharacterRB.velocity.y);
+        animator.SetFloat("magnitude", currentCharacterRB.velocity.magnitude);
     }
 
     private void FixedUpdate() {
-        rb.velocity = new Vector2(
-            horizontalMovement * moveSpeed, rb.velocity.y
+        currentCharacterRB.velocity = new Vector2(
+            horizontalMovement * moveSpeed, currentCharacterRB.velocity.y
         );
     }
 
@@ -65,10 +65,10 @@ public class PlayerControls : MonoBehaviour
                     animator.SetTrigger("jump");
                 }
 
-                rb.velocity = new Vector2(rb.velocity.x, actualJumpPower);
+                currentCharacterRB.velocity = new Vector2(currentCharacterRB.velocity.x, actualJumpPower);
                 jumpsRemaining--;
             } else if (context.canceled) {
-                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+                currentCharacterRB.velocity = new Vector2(currentCharacterRB.velocity.x, currentCharacterRB.velocity.y * 0.5f);
                 jumpsRemaining--;
                 animator.SetTrigger("jump");
             }
@@ -76,15 +76,15 @@ public class PlayerControls : MonoBehaviour
     }
 
     private void Gravity(){
-        if (rb.velocity.y < 0)
+        if (currentCharacterRB.velocity.y < 0)
         {
-            rb.gravityScale = baseGravity * fallSpeedMultiplier;
-            rb.velocity = new Vector2(
-                rb.velocity.x, MathF.Max(rb.velocity.y, -maxFallSpeed)
+            currentCharacterRB.gravityScale = baseGravity * fallSpeedMultiplier;
+            currentCharacterRB.velocity = new Vector2(
+                currentCharacterRB.velocity.x, MathF.Max(currentCharacterRB.velocity.y, -maxFallSpeed)
             );
         }
         else {
-            rb.gravityScale = baseGravity;
+            currentCharacterRB.gravityScale = baseGravity;
         }
     }
 
