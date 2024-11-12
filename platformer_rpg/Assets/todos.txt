@@ -1,6 +1,4 @@
 TODO:
-    make the camera follow the object holding playable characters
-    implement character switching mechanic
     start working on spells
         Teleport
         Charm -> use pink fb
