@@ -5,39 +5,33 @@ using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerCharactersController : MonoBehaviour
+public class PlayerCharactersManager : MonoBehaviour
 {
-    public CinemachineVirtualCamera cinemachineCamera;
 
     public List<GameObject> playableCharacters;
     private GameObject currentCharacter;
-    private PlayerMovement playerControls;
-    private PlayerActions playerActions;
 
     // Start is called before the first frame update
     void Start()
     {
-        currentCharacter = playableCharacters[0];
-        playerControls = transform.GetComponent<PlayerMovement>();
-        playerActions = transform.GetComponent<PlayerActions>();
-        playerActions.playerCharController = this;
 
-        playerControls.currentCharacterRB = currentCharacter.GetComponent<Rigidbody2D>();
-        playerControls.animator = currentCharacter.GetComponent<Animator>();
-        playerControls.groundCheckPos = currentCharacter.transform.GetChild(0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (cinemachineCamera.Follow != currentCharacter.transform) {
-            cinemachineCamera.Follow = currentCharacter.transform;
-        }
+
+    }
+
+    public void InitializeCurrentCharacter() {
+        currentCharacter = playableCharacters[0];
+        GameManager.Instance.playerMovement.Setup(currentCharacter);
     }
 
     public void ChangeCharacter(int index) {
         if (index <= playableCharacters.Count) {
             SwitchCurrentCharacter(playableCharacters[index]);
+            GameManager.Instance.cameraMgr.ChangeFollowObject(currentCharacter);
         }
     }
 
@@ -46,12 +40,12 @@ public class PlayerCharactersController : MonoBehaviour
             currentCharacter.SetActive(false);
             RepositionAllCharacters(currentCharacter.transform.position);
             newCharacter.SetActive(true);
+
             newCharacter.GetComponent<Rigidbody2D>().velocity = newCharacter.GetComponent<Rigidbody2D>().velocity;
             newCharacter.transform.localScale = currentCharacter.transform.localScale;
             currentCharacter = newCharacter;
-            playerControls.currentCharacterRB = currentCharacter.GetComponent<Rigidbody2D>();
-            playerControls.animator = currentCharacter.GetComponent<Animator>();
-            playerControls.groundCheckPos = currentCharacter.transform.GetChild(0);
+
+            GameManager.Instance.playerMovement.Setup(currentCharacter);
         }
     }
 
@@ -59,5 +53,9 @@ public class PlayerCharactersController : MonoBehaviour
         foreach (GameObject go in playableCharacters) {
             go.transform.position = newPos;
         }
+    }
+
+    public GameObject GetCurrentCharacter() {
+        return currentCharacter;
     }
 }

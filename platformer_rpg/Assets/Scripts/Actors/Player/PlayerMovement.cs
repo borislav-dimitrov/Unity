@@ -29,7 +29,6 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D currentCharacterRB;
     public Animator animator;
 
-
     private void Update() {
         Gravity();
         IsGrounded();
@@ -98,5 +97,11 @@ public class PlayerMovement : MonoBehaviour
     private void OnDrawGizmosSelected() {
         Gizmos.color = Color.green;
         Gizmos.DrawWireCube(groundCheckPos.position, groundCheckSize);
+    }
+
+    public void Setup(GameObject character) {
+        currentCharacterRB = character.GetComponent<Rigidbody2D>();
+        animator = character.GetComponent<Animator>();
+        groundCheckPos = character.transform.GetChild(0);
     }
 }

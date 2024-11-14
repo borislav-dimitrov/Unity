@@ -5,8 +5,6 @@ using UnityEngine.InputSystem;
 
 public class PlayerActions : MonoBehaviour
 {
-    public PlayerCharactersController playerCharController;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -24,34 +22,34 @@ public class PlayerActions : MonoBehaviour
     }
 
     public void Spell1(InputAction.CallbackContext context) {
-        Debug.Log("Spell1");
+        // GameManager.Instance.charMgr.GetCurrentCharacter().GetComponent<BaseClass>().Spell1();
     }
 
     public void Spell2(InputAction.CallbackContext context) {
-        Debug.Log("Spell2");
+        // GameManager.Instance.charMgr.GetCurrentCharacter().GetComponent<BaseClass>().Spell2();
     }
 
     public void Spell3(InputAction.CallbackContext context) {
-        Debug.Log("Spell3");
+        // GameManager.Instance.charMgr.GetCurrentCharacter().GetComponent<BaseClass>().Spell3();
     }
 
     public void Spell4(InputAction.CallbackContext context) {
-        Debug.Log("Spell4");
+        // GameManager.Instance.charMgr.GetCurrentCharacter().GetComponent<BaseClass>().Spell4();
     }
 
     public void SwitchCharacter1(InputAction.CallbackContext context) {
-        playerCharController.ChangeCharacter(0);
+        GameManager.Instance.charMgr.ChangeCharacter(0);
     }
 
     public void SwitchCharacter2(InputAction.CallbackContext context) {
-        playerCharController.ChangeCharacter(1);
+        GameManager.Instance.charMgr.ChangeCharacter(1);
     }
 
     public void SwitchCharacter3(InputAction.CallbackContext context) {
-        playerCharController.ChangeCharacter(2);
+        GameManager.Instance.charMgr.ChangeCharacter(2);
     }
 
     public void SwitchCharacter4(InputAction.CallbackContext context) {
-        playerCharController.ChangeCharacter(3);
+        GameManager.Instance.charMgr.ChangeCharacter(3);
     }
 }
