@@ -24,10 +24,19 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Attack",
+                    "type": "Button",
+                    "id": "4e744067-1551-4555-959a-99f77e69cdbb",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Use",
                     "type": "Button",
                     "id": "86339d62-8398-4f75-bd35-7b28b931a55e",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -81,7 +90,7 @@
                     "name": "SwitchCharacter2",
                     "type": "Button",
                     "id": "2db856c4-86f1-4e73-a871-4289a72b9d68",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -219,7 +228,7 @@
                 {
                     "name": "",
                     "id": "d03ddafe-7cd8-42a9-aa4b-c9bd9c615c0f",
-                    "path": "<Gamepad>/buttonWest",
+                    "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -389,6 +398,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "SwitchCharacter3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "64595413-57a3-4b8c-b435-4e2d941ee3c7",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cd558801-2935-4d27-8201-3478541dc62c",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

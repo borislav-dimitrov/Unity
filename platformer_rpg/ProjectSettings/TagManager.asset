@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Hackable
   layers:
   - Default
   - TransparentFX
@@ -11,7 +12,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Actors
   - 
   - 
   - Background
@@ -35,8 +36,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Hackable
+  - HackArea
   m_SortingLayers:
   - name: Default
     uniqueID: 0

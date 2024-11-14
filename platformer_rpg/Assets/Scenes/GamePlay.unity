@@ -2462,7 +2462,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: -2.28, y: -1.77, z: -9.987727}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2766,6 +2766,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 0354a484-2ebe-4ffe-ada8-b39d952d67d9
     m_ActionName: BaseActionMap/SwitchCharacter4[/Keyboard/v]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 591814498}
+        m_TargetAssemblyTypeName: PlayerActions, Assembly-CSharp
+        m_MethodName: Attack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4e744067-1551-4555-959a-99f77e69cdbb
+    m_ActionName: BaseActionMap/Attack[/XInputControllerWindows/buttonWest,/Keyboard/d]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: BaseScheme
   m_DefaultActionMap: BaseActionMap
@@ -3136,6 +3152,11 @@ Animator:
 --- !u!50 &1196520071 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 2388840560338763836, guid: 782464501a6141646aa95c99c391cff0, type: 3}
+  m_PrefabInstance: {fileID: 1196520069}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1196520072 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3658683809571061643, guid: 782464501a6141646aa95c99c391cff0, type: 3}
   m_PrefabInstance: {fileID: 1196520069}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1451110437
@@ -3592,7 +3613,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 791791989}
+  m_Follow: {fileID: 1196520072}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 4.350177
@@ -3621,7 +3642,7 @@ Transform:
   m_GameObject: {fileID: 2092885819}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -2.28, y: -2.77, z: -9.987727}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

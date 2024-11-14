@@ -1,7 +1,3 @@
 TODO:
-    add input maps for basic attack
-    start working on spells
-        Barrier
-        Charm -> use pink fb
-        Fireball
-        Ice Lance -> use blue fb
+    think of how to process the effects of the applied buffs/debuffs/disables
+    start working on spells -> Technomancer

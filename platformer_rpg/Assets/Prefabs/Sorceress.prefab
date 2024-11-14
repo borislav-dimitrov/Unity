@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4744897934911780820}
   - component: {fileID: 8321161354191309053}
   - component: {fileID: 2468915003203124399}
+  - component: {fileID: 4095599265238832973}
   m_Layer: 0
   m_Name: Sorceress
   m_TagString: Untagged
@@ -181,6 +182,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4095599265238832973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2668026482478613082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db05c56723a04c6438f8f3e08026410d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6981569437674891617
 GameObject:
   m_ObjectHideFlags: 0
