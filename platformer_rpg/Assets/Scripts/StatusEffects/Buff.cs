@@ -10,29 +10,48 @@ public class Buff
     public float duration;
     public bool isAlive;
 
-    public Buff(int buffId, string effectName, float duration) {
+    private Action onUseEffect;
+    private Action onDisappear;
+
+    public Buff(
+        int buffId, string effectName, float duration,
+         Action onUseEffect, Action onDisappear
+    ) {
         this.buffId = buffId;
         this.effectName = effectName;
         this.duration = duration;
+        this.onUseEffect = onUseEffect;
+        this.onDisappear = onDisappear;
     }
 
-    public virtual void Effect() {
-        throw new NotImplementedException();
+    public virtual void UseEffect() {
+        onUseEffect();
     }
 
-    public virtual void OnDisappear() {
-        throw new NotImplementedException();
-    }
-}
-
-
-public class IncreasedHealthRegen : Buff {
-    private float ammountHpRegen;
-    public IncreasedHealthRegen(float duration, float ammountHpRegen) : base(0, "Increased Health Regeneration", duration) {
-        this.ammountHpRegen = ammountHpRegen;
-    }
-
-    public override void Effect() {
-        Debug.Log($"Providing {ammountHpRegen} {this.effectName} for {this.duration} seconds");
+    public virtual void Disappear() {
+        isAlive = false;
+        onDisappear();
     }
 }
+
+public static class BuffIds {
+    public static readonly int hpReg = 0;
+}
+
+public static class BuffNames {
+    public static readonly string hpReg = "Health Regeneration";
+}
+
+// public class IncreasedHealthRegen : Buff {
+//     private float ammountHpRegen;
+
+//     public IncreasedHealthRegen(
+//         float duration, float ammountHpRegen,
+//         Action onUseEffect, Action onDisappear
+//     ) : base(
+//         0, "Increased Health Regeneration", duration,
+//         onUseEffect, onDisappear
+//     ) {
+//         this.ammountHpRegen = ammountHpRegen;
+//     }
+// }

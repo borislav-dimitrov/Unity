@@ -58,6 +58,6 @@ public class BaseClass : MonoBehaviour
     }
 
     public void ModifyPlayerStats() {
-        GameManager.Instance.statusEffectMgr.playerStats.ApplyCharacterModifiers(this);
+        GameManager.Instance.statusEffectMgr.ApplyCharacterModifiersAndPersistBuffs(this);
     }
 }

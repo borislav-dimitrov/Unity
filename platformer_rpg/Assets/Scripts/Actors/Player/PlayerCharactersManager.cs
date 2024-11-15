@@ -25,6 +25,7 @@ public class PlayerCharactersManager : MonoBehaviour
 
     public void InitializeCurrentCharacter() {
         currentCharacter = playableCharacters[0];
+        currentCharacter.GetComponent<BaseClass>().ModifyPlayerStats();
         GameManager.Instance.playerMovement.Setup(currentCharacter);
     }
 

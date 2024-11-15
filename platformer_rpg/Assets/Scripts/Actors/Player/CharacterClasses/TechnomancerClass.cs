@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,7 +20,15 @@ public class TechnomancerClass : BaseClass
 
     public override void Spell2() {
         // Buff 1
-        IncreasedHealthRegen hpReg = new IncreasedHealthRegen(3, 10);
+        Buff hpReg = new Buff(
+            buffId: BuffIds.hpReg, effectName: BuffNames.hpReg, duration: 60,
+            onUseEffect: () => {
+                GameManager.Instance.statusEffectMgr.playerStats.healthRegen += 10;
+            },
+            onDisappear: () => {
+                GameManager.Instance.statusEffectMgr.playerStats.healthRegen -= 10;
+            }
+        );
         GameManager.Instance.statusEffectMgr.AddPlayerBuff(hpReg);
     }
 

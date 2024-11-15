@@ -27,18 +27,29 @@ public class StatusEffectManager : MonoBehaviour
 
 
     public void AddCharBuff(Buff buff) {
-
-    }
-
-    public void AddPlayerBuff(Buff buff) {
         foreach (Buff charBuff in charBuffs) {
             if (charBuff.buffId == buff.buffId) {
-                charBuffs.Remove(buff);
+                charBuff.Disappear();
+                charBuffs.Remove(charBuff);
                 break;
             }
         }
 
         charBuffs.Add(buff);
+        buff.UseEffect();
+    }
+
+    public void AddPlayerBuff(Buff buff) {
+        foreach (Buff playerBuff in playerBuffs) {
+            if (playerBuff.buffId == buff.buffId) {
+                playerBuff.Disappear();
+                playerBuffs.Remove(playerBuff);
+                break;
+            }
+        }
+
+        playerBuffs.Add(buff);
+        buff.UseEffect();
     }
 
     public void AddPlayerDebuff(Debuff debuff) {
@@ -50,12 +61,12 @@ public class StatusEffectManager : MonoBehaviour
     }
 
     private void ProcessBuffs(List<Buff> buffsToProcess) {
-        // foreach(Buff buff in buffsToProcess) {
-        //     if (buff.isAlive) {
-        //         buff.OnDisappear();
-        //         buffsToProcess.Remove(buff);
-        //     }
-        // }
+        foreach(Buff buff in buffsToProcess) {
+            if (buff.isAlive) {
+                buff.Disappear();
+                buffsToProcess.Remove(buff);
+            }
+        }
     }
 
     private void ProcessPlayerDebuffs() {
@@ -64,5 +75,13 @@ public class StatusEffectManager : MonoBehaviour
 
     private void ProcessPlayerDisables() {
 
+    }
+
+    public void ApplyCharacterModifiersAndPersistBuffs(BaseClass characterClass) {
+        playerStats.ApplyCharacterModifiers(characterClass);
+
+        foreach (Buff buff in playerBuffs) {
+            buff.UseEffect();
+        }
     }
 }
