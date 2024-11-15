@@ -21,7 +21,7 @@ public class TechnomancerClass : BaseClass
     public override void Spell2() {
         // Buff 1
         Buff hpReg = new Buff(
-            buffId: BuffIds.hpReg, effectName: BuffNames.hpReg, duration: 60,
+            buffId: BuffIds.hpReg, effectName: BuffNames.hpReg, duration: 10,
             onUseEffect: () => {
                 GameManager.Instance.statusEffectMgr.playerStats.healthRegen += 10;
             },

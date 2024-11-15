@@ -22,15 +22,26 @@ public class Buff
         this.duration = duration;
         this.onUseEffect = onUseEffect;
         this.onDisappear = onDisappear;
+        this.isAlive = true;
     }
 
-    public virtual void UseEffect() {
+    public void UseEffect() {
         onUseEffect();
     }
 
-    public virtual void Disappear() {
+    public void Disappear() {
         isAlive = false;
         onDisappear();
+    }
+
+    public void Tick() {
+        duration -= 1;
+
+        if (duration <= 0) {
+            isAlive = false;
+        }
+
+        Debug.Log($"{duration}, {isAlive}");
     }
 }
 

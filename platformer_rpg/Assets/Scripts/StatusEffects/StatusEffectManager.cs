@@ -10,6 +10,11 @@ public class StatusEffectManager : MonoBehaviour
     private List<Debuff> playerDebuffs = new();
     private List<Disable> playerDisables = new();
 
+    private float tickInterval = 1f;
+    private float timePassed = 0f;
+    private List<Buff> buffsToBeRemoved = new();
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,10 +24,15 @@ public class StatusEffectManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ProcessBuffs(charBuffs);
-        ProcessBuffs(playerBuffs);
-        ProcessPlayerDebuffs();
-        ProcessPlayerDisables();
+        timePassed += Time.deltaTime;
+        if (timePassed > tickInterval) {
+            timePassed = 0f;
+
+            ProcessBuffs(charBuffs);
+            ProcessBuffs(playerBuffs);
+            ProcessPlayerDebuffs();
+            ProcessPlayerDisables();
+        }
     }
 
 
@@ -62,11 +72,19 @@ public class StatusEffectManager : MonoBehaviour
 
     private void ProcessBuffs(List<Buff> buffsToProcess) {
         foreach(Buff buff in buffsToProcess) {
-            if (buff.isAlive) {
+            buff.Tick();
+
+            if (!buff.isAlive) {
                 buff.Disappear();
-                buffsToProcess.Remove(buff);
+                buffsToBeRemoved.Add(buff);
             }
         }
+
+        foreach(Buff buff in buffsToBeRemoved) {
+            buffsToProcess.Remove(buff);
+        }
+
+        buffsToBeRemoved.Clear();
     }
 
     private void ProcessPlayerDebuffs() {
