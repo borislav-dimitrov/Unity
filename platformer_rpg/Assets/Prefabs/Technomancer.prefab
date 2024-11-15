@@ -226,15 +226,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74410f455e4d4e1458a85a0b89837f5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  className: Base
-  moveSpeed: 5
-  jumpPower: 8
-  baseGravity: 2
-  maxFallSpeed: 18
-  fallSpeedMultiplier: 2
-  healthPool: 70
+  className: Technomancer
+  moveSpeedModifier: 0
+  jumpPowerModifier: 0
+  maxJumpsModifier: 0
+  baseGravityModifier: 0
+  maxFallSpeedModifier: 0
+  fallSpeedMultiplier: 0
+  healthPoolModifier: -25
+  healthRegenModifier: 0
+  manaPoolModifier: 0
+  attackDamageModifier: 0
   attackType: 0
-  attackDamage: 25
   hackArea: {fileID: 505694406093463524}
 --- !u!1 &4999869299406875571
 GameObject:

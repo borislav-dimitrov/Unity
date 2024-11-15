@@ -225,3 +225,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e6f2b82a510e3409c8148444ebf3bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  className: Base
+  moveSpeedModifier: 1
+  jumpPowerModifier: 1
+  maxJumpsModifier: 0
+  baseGravityModifier: 0
+  maxFallSpeedModifier: 0
+  fallSpeedMultiplier: 0
+  healthPoolModifier: 50
+  healthRegenModifier: 10
+  manaPoolModifier: 0
+  attackDamageModifier: 20
+  attackType: 0

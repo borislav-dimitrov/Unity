@@ -13,19 +13,17 @@ public class BaseClass : MonoBehaviour
     /// This is the BaseClass that needs to be overriden by the other character classes
     /// </summary>
     public string className = "Base";
-    public float moveSpeed = 5;
-    public float jumpPower = 8;
-    public float baseGravity = 2;
-    public float maxFallSpeed = 18;
-    public float fallSpeedMultiplier = 2;
-    public int healthPool = 100;
-    public int? manaPool = null;
+    public float moveSpeedModifier = 0;
+    public float jumpPowerModifier = 0;
+    public int maxJumpsModifier = 0;
+    public float baseGravityModifier = 0;
+    public float maxFallSpeedModifier = 0;
+    public float fallSpeedMultiplier = 0;
+    public int healthPoolModifier = 0;
+    public int healthRegenModifier = 0;
+    public int manaPoolModifier = 0;
+    public int attackDamageModifier = 0;
     public AttackTypes attackType = AttackTypes.None;
-    public int attackDamage = 25;
-
-    public List<Buff> buffs = new List<Buff>();
-    public List<Debuff> debuffs = new List<Debuff>();
-    public List<Disable> disables = new List<Disable>();
 
     // Start is called before the first frame update
     public virtual void Start()
@@ -57,5 +55,9 @@ public class BaseClass : MonoBehaviour
 
     public virtual void Spell4() {
         throw new NotImplementedException();
+    }
+
+    public void ModifyPlayerStats() {
+        GameManager.Instance.statusEffectMgr.playerStats.ApplyCharacterModifiers(this);
     }
 }

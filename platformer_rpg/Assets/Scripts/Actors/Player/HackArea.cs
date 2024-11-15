@@ -15,14 +15,15 @@ public class HackArea : MonoBehaviour
             if (other.gameObject != hackableInRadius) {
                 hackableInRadius = other.gameObject;
             }
-            Debug.Log($"You can start hacking {hackableInRadius.name}");
+
+            // Show message balloon
+            Debug.Log($"Hack...");
         }
     }
 
     private void OnTriggerExit2D(Collider2D other) {
         if (other.gameObject == hackableInRadius) {
             hackableInRadius = null;
-            Debug.Log($"You left hacking area for {other.gameObject.name}");
         }
     }
 }

@@ -194,6 +194,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db05c56723a04c6438f8f3e08026410d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  className: Sorceress
+  moveSpeedModifier: 0
+  jumpPowerModifier: 0
+  maxJumpsModifier: 0
+  baseGravityModifier: 0
+  maxFallSpeedModifier: 0
+  fallSpeedMultiplier: 0
+  healthPoolModifier: 0
+  healthRegenModifier: 0
+  manaPoolModifier: 100
+  attackDamageModifier: 0
+  attackType: 0
 --- !u!1 &6981569437674891617
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,19 +7,19 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
-    public float moveSpeed = 5f;
+    public float moveSpeed;
     private Vector2 _movedDirection;
     float horizontalMovement;
 
     [Header("Jump")]
-    public float jumpPower = 8f;
-    int maxJumps = 2;
+    public float jumpPower;
+    int maxJumps;
     int jumpsRemaining;
 
     [Header("Gravity")]
-    public float baseGravity = 2f;
-    public float maxFallSpeed = 18f;
-    public float fallSpeedMultiplier = 2f;
+    public float baseGravity;
+    public float maxFallSpeed;
+    public float fallSpeedMultiplier;
 
     [Header("GroundCheck")]
     public Transform groundCheckPos;
@@ -28,6 +28,10 @@ public class PlayerMovement : MonoBehaviour
 
     public Rigidbody2D currentCharacterRB;
     public Animator animator;
+
+    private void Start() {
+
+    }
 
     private void Update() {
         Gravity();
@@ -103,5 +107,12 @@ public class PlayerMovement : MonoBehaviour
         currentCharacterRB = character.GetComponent<Rigidbody2D>();
         animator = character.GetComponent<Animator>();
         groundCheckPos = character.transform.GetChild(0);
+
+        moveSpeed = GameManager.Instance.statusEffectMgr.playerStats.moveSpeed;
+        jumpPower = GameManager.Instance.statusEffectMgr.playerStats.jumpPower;
+        maxJumps = GameManager.Instance.statusEffectMgr.playerStats.maxJumps;
+        baseGravity = GameManager.Instance.statusEffectMgr.playerStats.baseGravity;
+        maxFallSpeed = GameManager.Instance.statusEffectMgr.playerStats.maxFallSpeed;
+        fallSpeedMultiplier = GameManager.Instance.statusEffectMgr.playerStats.fallSpeedMultiplier;
     }
 }

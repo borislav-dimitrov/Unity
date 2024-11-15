@@ -45,6 +45,7 @@ public class PlayerCharactersManager : MonoBehaviour
             newCharacter.transform.localScale = currentCharacter.transform.localScale;
             currentCharacter = newCharacter;
 
+            currentCharacter.GetComponent<BaseClass>().ModifyPlayerStats();
             GameManager.Instance.playerMovement.Setup(currentCharacter);
         }
     }
