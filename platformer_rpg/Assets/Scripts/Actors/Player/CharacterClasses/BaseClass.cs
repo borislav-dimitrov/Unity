@@ -21,8 +21,10 @@ public class BaseClass : MonoBehaviour
     public float fallSpeedMultiplier = 0;
     public int healthPoolModifier = 0;
     public int healthRegenModifier = 0;
+    public float maxHealtPercModifier = 0;
     public int manaPoolModifier = 0;
     public int attackDamageModifier = 0;
+    public int damageReductionModifier = 0;
     public AttackTypes attackType = AttackTypes.None;
 
     // Start is called before the first frame update

@@ -19,26 +19,27 @@ public class TechnomancerClass : BaseClass
     }
 
     public override void Spell2() {
-        // Buff 1
-        Buff hpReg = new Buff(
-            buffId: BuffIds.hpReg, effectName: BuffNames.hpReg, duration: 10,
-            onUseEffect: () => {
-                GameManager.Instance.statusEffectMgr.playerStats.healthRegen += 10;
-            },
-            onDisappear: () => {
-                GameManager.Instance.statusEffectMgr.playerStats.healthRegen -= 10;
-            }
-        );
+        ClearTechnomancerBuffs();
+        TechnomancerHpReg hpReg = new(regAmount: 15, duration: 60);
         GameManager.Instance.statusEffectMgr.AddPlayerBuff(hpReg);
     }
 
     public override void Spell3() {
-        Debug.Log("Technomancer Spell 3");
+        ClearTechnomancerBuffs();
+        TechnomancerMaxHp maxHp = new(maxHpPerc: 10, duration: 10);
+        GameManager.Instance.statusEffectMgr.AddPlayerBuff(maxHp);
     }
 
     public override void Spell4() {
-        Debug.Log("Technomancer Spell 4");
+        ClearTechnomancerBuffs();
+        TechnomancerDR dr = new(reduction: 5, duration: 60);
+        GameManager.Instance.statusEffectMgr.AddPlayerBuff(dr);
     }
 
 
+    private void ClearTechnomancerBuffs() {
+        GameManager.Instance.statusEffectMgr.RemovePlayerBuff(BuffIds.technomancerHpReg);
+        GameManager.Instance.statusEffectMgr.RemovePlayerBuff(BuffIds.technomancerMaxHP);
+        GameManager.Instance.statusEffectMgr.RemovePlayerBuff(BuffIds.technomancerDR);
+    }
 }

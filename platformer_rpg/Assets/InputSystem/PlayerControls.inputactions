@@ -72,7 +72,7 @@
                     "name": "Spell4",
                     "type": "Button",
                     "id": "517c0b9d-9b10-4fae-bade-2a212178404a",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -306,6 +306,17 @@
                     "name": "",
                     "id": "76d0c197-2cd8-403f-b450-b39a0ddd41f2",
                     "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Spell4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2a0d4445-2419-45b8-a02f-ed3b1224db0b",
+                    "path": "<Keyboard>/r",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

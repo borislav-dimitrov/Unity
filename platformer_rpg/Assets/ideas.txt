@@ -1,10 +1,13 @@
 VirtualGuy -> Technomancer ->
 	Abilities:
-		Hack (play minigames for time) to open doors/shorcuts/secret areas
-		4 Buffs that will persist on other characters as well (2 offensive, 2 defensive) can only have one of a type at a time
+		1. Hack (play minigames for time) to open doors/shorcuts/secret areas
+        2. HP Regen (player) buff
+        3. Increase max HP (player) buff
+		4. Damage reduction (player) buff
+        Can only have one of the buffs at a time.
 	Passives:
 		Low HP
-		Normal move speed
+		Slower move speed
 		Normal jump
 		Can't attack
 

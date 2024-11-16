@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class StatusEffectManager : MonoBehaviour
@@ -47,6 +48,19 @@ public class StatusEffectManager : MonoBehaviour
 
         charBuffs.Add(buff);
         buff.UseEffect();
+
+        Debug.Log($"++ {buff.effectName}");
+    }
+
+    public void RemoveCharBuff(int buffId) {
+        foreach (Buff buff in charBuffs) {
+            if (buff.buffId == buffId) {
+                Debug.Log($"-- {buff.effectName}");
+                buff.Disappear();
+                charBuffs.Remove(buff);
+                break;
+            }
+        }
     }
 
     public void AddPlayerBuff(Buff buff) {
@@ -60,6 +74,18 @@ public class StatusEffectManager : MonoBehaviour
 
         playerBuffs.Add(buff);
         buff.UseEffect();
+        Debug.Log($"++ {buff.effectName}");
+    }
+
+    public void RemovePlayerBuff(int buffId) {
+        foreach (Buff buff in playerBuffs) {
+            if (buff.buffId == buffId) {
+                Debug.Log($"-- {buff.effectName}");
+                buff.Disappear();
+                playerBuffs.Remove(buff);
+                break;
+            }
+        }
     }
 
     public void AddPlayerDebuff(Debuff debuff) {

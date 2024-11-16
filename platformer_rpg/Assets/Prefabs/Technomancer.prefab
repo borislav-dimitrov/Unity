@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   className: Technomancer
-  moveSpeedModifier: 0
+  moveSpeedModifier: -1
   jumpPowerModifier: 0
   maxJumpsModifier: 0
   baseGravityModifier: 0

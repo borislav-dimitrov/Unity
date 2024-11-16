@@ -17,12 +17,16 @@ public class PlayerStats : MonoBehaviour
     public float fallSpeedMultiplier = 2;
 
     [Header("Resources")]
+    [SerializeField]
+    private int totalHealthPool = 100;
     public int healthPool = 100;
     public int healthRegen = 0;
+    public float maxHealtPerc = 0;
     public int manaPool = 0;
 
     [Header("Combat")]
     public int attackDamage = 25;
+    public int damageReduction = 0;
     public AttackTypes attackType = AttackTypes.None;
 
 
@@ -35,9 +39,13 @@ public class PlayerStats : MonoBehaviour
         fallSpeedMultiplier = 2;
         healthPool = 100;
         healthRegen = 0;
+        maxHealtPerc = 0;
         manaPool = 0;
         attackDamage = 25;
+        damageReduction = 0;
         attackType = AttackTypes.None;
+
+        totalHealthPool = CalcTotalHealthPool();
     }
 
     public void ApplyCharacterModifiers(BaseClass characterClass) {
@@ -51,8 +59,29 @@ public class PlayerStats : MonoBehaviour
         fallSpeedMultiplier += characterClass.fallSpeedMultiplier;
         healthPool += characterClass.healthPoolModifier;
         healthRegen += characterClass.healthRegenModifier;
+        maxHealtPerc += characterClass.maxHealtPercModifier;
         manaPool += characterClass.manaPoolModifier;
         attackDamage += characterClass.attackDamageModifier;
+        damageReduction += characterClass.damageReductionModifier;
         attackType = characterClass.attackType;
+
+        totalHealthPool = CalcTotalHealthPool();
+    }
+
+    private int CalcTotalHealthPool () {
+        if (maxHealtPerc > 0) {
+            return (int)(healthPool + (healthPool * maxHealtPerc / 100));
+        }
+        return healthPool;
+    }
+
+    public void IncMaxHpPerc (float newPerc) {
+        maxHealtPerc += newPerc;
+        totalHealthPool = CalcTotalHealthPool();
+    }
+
+    public void DecMaxHpPerc (float newPerc) {
+        maxHealtPerc -= newPerc;
+        totalHealthPool = CalcTotalHealthPool();
     }
 }

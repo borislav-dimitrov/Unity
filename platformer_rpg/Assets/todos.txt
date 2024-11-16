@@ -1,3 +1,2 @@
 TODO:
-    think of how to process the effects of the applied buffs/debuffs/disables
-    start working on spells -> Technomancer
+    continue working on spells -> Brawler
