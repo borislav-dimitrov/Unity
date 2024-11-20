@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public enum AttackTypes {
     None, Melee, Range
@@ -27,27 +28,43 @@ public class BaseClass : MonoBehaviour
     public int damageReductionModifier = 0;
     public AttackTypes attackType = AttackTypes.None;
 
+
+    private double startCastTime = 0;
+
     public virtual void Attack() {
         throw new NotImplementedException();
     }
 
-    public virtual void Spell1() {
+    public virtual void Spell1(InputAction.CallbackContext context) {
         throw new NotImplementedException();
     }
 
-    public virtual void Spell2() {
+    public virtual void Spell2(InputAction.CallbackContext context) {
         throw new NotImplementedException();
     }
 
-    public virtual void Spell3() {
+    public virtual void Spell3(InputAction.CallbackContext context) {
         throw new NotImplementedException();
     }
 
-    public virtual void Spell4() {
+    public virtual void Spell4(InputAction.CallbackContext context) {
         throw new NotImplementedException();
     }
 
     public void ModifyPlayerStats() {
         GameManager.Instance.statusEffectMgr.ApplyCharacterModifiersAndPersistBuffs(this);
+    }
+
+    protected void CastSpell(InputAction.CallbackContext context, double reqCastTime, Action onSuccess) {
+        if (context.performed) startCastTime = context.startTime;
+        if (context.canceled) {
+            double castTime = context.time - startCastTime;
+            startCastTime = 0;
+            if (castTime >= reqCastTime){
+                onSuccess();
+            } else {
+                Debug.Log($"Cast failed! Cast time - {castTime}");
+            }
+        }
     }
 }

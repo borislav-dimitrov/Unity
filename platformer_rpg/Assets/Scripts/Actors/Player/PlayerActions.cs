@@ -16,23 +16,19 @@ public class PlayerActions : MonoBehaviour
     }
 
     public void Spell1(InputAction.CallbackContext context) {
-        if (!context.canceled) return;
-        GameManager.Instance.charMgr.GetCurrentCharacter().GetComponent<BaseClass>().Spell1();
+        GameManager.Instance.charMgr.GetCurrentCharacter().GetComponent<BaseClass>().Spell1(context);
     }
 
     public void Spell2(InputAction.CallbackContext context) {
-        if (!context.canceled) return;
-        GameManager.Instance.charMgr.GetCurrentCharacter().GetComponent<BaseClass>().Spell2();
+        GameManager.Instance.charMgr.GetCurrentCharacter().GetComponent<BaseClass>().Spell2(context);
     }
 
     public void Spell3(InputAction.CallbackContext context) {
-        if (!context.canceled) return;
-        GameManager.Instance.charMgr.GetCurrentCharacter().GetComponent<BaseClass>().Spell3();
+        GameManager.Instance.charMgr.GetCurrentCharacter().GetComponent<BaseClass>().Spell3(context);
     }
 
     public void Spell4(InputAction.CallbackContext context) {
-        if (!context.canceled) return;
-        GameManager.Instance.charMgr.GetCurrentCharacter().GetComponent<BaseClass>().Spell4();
+        GameManager.Instance.charMgr.GetCurrentCharacter().GetComponent<BaseClass>().Spell4(context);
     }
 
     public void SwitchCharacter1(InputAction.CallbackContext context) {

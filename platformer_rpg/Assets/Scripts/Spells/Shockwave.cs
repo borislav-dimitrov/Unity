@@ -7,6 +7,7 @@ public class Shockwave : MonoBehaviour
 {
     private Animator animator;
     private CapsuleCollider2D hitBox;
+    public readonly double requiredCastTime = 2;
 
     private List<GameObject> objectsHit = new();
 

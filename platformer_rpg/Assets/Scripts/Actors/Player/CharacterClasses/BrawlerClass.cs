@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class BrawlerClass : BaseClass
 {
@@ -11,19 +12,19 @@ public class BrawlerClass : BaseClass
         Debug.Log($"Brawler Attack {attackType} {attackDamageModifier}");
     }
 
-    public override void Spell1() {
-        shockwave.Cast();
+    public override void Spell1(InputAction.CallbackContext context) {
+        CastSpell(context, shockwave.requiredCastTime, () => {shockwave.Cast();});
     }
 
-    public override void Spell2() {
+    public override void Spell2(InputAction.CallbackContext context) {
         Debug.Log("Brawler Spell 2");
     }
 
-    public override void Spell3() {
+    public override void Spell3(InputAction.CallbackContext context) {
         Debug.Log("Brawler Spell 3");
     }
 
-    public override void Spell4() {
+    public override void Spell4(InputAction.CallbackContext context) {
         Debug.Log("Brawler Spell 4");
     }
 }
