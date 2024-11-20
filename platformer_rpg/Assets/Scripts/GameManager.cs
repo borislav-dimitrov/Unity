@@ -15,18 +15,7 @@ public class GameManager : MonoBehaviour
 
     void Awake() {
         Instance = this;
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
         charMgr.InitializeCurrentCharacter();
         cameraMgr.ChangeFollowObject(charMgr.GetCurrentCharacter());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }

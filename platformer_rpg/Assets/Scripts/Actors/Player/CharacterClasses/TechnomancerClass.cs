@@ -8,7 +8,7 @@ public class TechnomancerClass : BaseClass
     [SerializeField] private HackArea hackArea;
 
     public override void Attack() {
-        Debug.Log($"Brawler Attack {attackType} {attackDamageModifier} {healthPoolModifier}");
+        Debug.Log($"Technomancer Attack {attackType} {attackDamageModifier}");
     }
 
     public override void Spell1() {

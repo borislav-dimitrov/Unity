@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8321161354191309053}
   - component: {fileID: 2468915003203124399}
   - component: {fileID: 4095599265238832973}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Sorceress
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,8 +203,10 @@ MonoBehaviour:
   fallSpeedMultiplier: 0
   healthPoolModifier: 0
   healthRegenModifier: 0
+  maxHealtPercModifier: 0
   manaPoolModifier: 100
   attackDamageModifier: 0
+  damageReductionModifier: 0
   attackType: 0
 --- !u!1 &6981569437674891617
 GameObject:

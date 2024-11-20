@@ -9,8 +9,7 @@ public class BackgroundController : MonoBehaviour
     public GameObject cam;
     public float parallaxEffectSpeed; // 0 = move with cam | 1 = won't move | 0.5 = half speed
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         startPos = transform.position.x;
         length = GetComponent<SpriteRenderer>().bounds.size.x;

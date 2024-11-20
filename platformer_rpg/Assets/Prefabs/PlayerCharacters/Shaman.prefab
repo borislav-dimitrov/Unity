@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3059299122213127448
+--- !u!1 &7501372243724782356
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,7 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2006944938508102733}
+  - component: {fileID: 402231184698323088}
   m_Layer: 0
   m_Name: GroundCheck
   m_TagString: Untagged
@@ -16,22 +16,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2006944938508102733
+--- !u!4 &402231184698323088
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3059299122213127448}
+  m_GameObject: {fileID: 7501372243724782356}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.01, y: -0.465, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7794358303841390444}
+  m_Father: {fileID: 5424702596548987551}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5604665984010593470
+--- !u!1 &9193872424941304280
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -39,42 +39,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7794358303841390444}
-  - component: {fileID: 3679729639289178900}
-  - component: {fileID: 303395111393729990}
-  - component: {fileID: 3160215948195231830}
-  - component: {fileID: 5850487949757981037}
-  - component: {fileID: 3543241312540229512}
-  m_Layer: 0
-  m_Name: Brawler
+  - component: {fileID: 5424702596548987551}
+  - component: {fileID: 7616193976048377990}
+  - component: {fileID: 8453183898390045320}
+  - component: {fileID: 8045091624993540401}
+  - component: {fileID: 1928612534806363111}
+  - component: {fileID: 6089518959681097637}
+  m_Layer: 13
+  m_Name: Shaman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7794358303841390444
+--- !u!4 &5424702596548987551
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5604665984010593470}
+  m_GameObject: {fileID: 9193872424941304280}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.512624, y: -1.0752481, z: 0.012272883}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2006944938508102733}
+  - {fileID: 402231184698323088}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &3679729639289178900
+--- !u!212 &7616193976048377990
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5604665984010593470}
+  m_GameObject: {fileID: 9193872424941304280}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -109,7 +109,7 @@ SpriteRenderer:
   m_SortingLayerID: 357539919
   m_SortingLayer: 8
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6367560908665664636, guid: cd947491a13509945aa1b644f9db3ef2, type: 3}
+  m_Sprite: {fileID: -6367560908665664636, guid: 3750f45c844123341b9a777a96cb1eca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -120,14 +120,14 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &303395111393729990
+--- !u!50 &8453183898390045320
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5604665984010593470}
+  m_GameObject: {fileID: 9193872424941304280}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -147,13 +147,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &3160215948195231830
+--- !u!61 &8045091624993540401
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5604665984010593470}
+  m_GameObject: {fileID: 9193872424941304280}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -192,17 +192,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.6}
   m_EdgeRadius: 0
---- !u!95 &5850487949757981037
+--- !u!95 &1928612534806363111
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5604665984010593470}
+  m_GameObject: {fileID: 9193872424941304280}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 49d51d5437650ff43a8b0e0c2ad66e52, type: 2}
+  m_Controller: {fileID: 9100000, guid: 395cab6cb43d1b844b49cd3bd09fa212, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -213,27 +213,29 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3543241312540229512
+--- !u!114 &6089518959681097637
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5604665984010593470}
+  m_GameObject: {fileID: 9193872424941304280}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6e6f2b82a510e3409c8148444ebf3bb, type: 3}
+  m_Script: {fileID: 11500000, guid: 978bb7b9d74c912408badf8871cbca1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   className: Base
-  moveSpeedModifier: 1
-  jumpPowerModifier: 1
+  moveSpeedModifier: 0
+  jumpPowerModifier: 0
   maxJumpsModifier: 0
   baseGravityModifier: 0
   maxFallSpeedModifier: 0
   fallSpeedMultiplier: 0
-  healthPoolModifier: 50
-  healthRegenModifier: 10
+  healthPoolModifier: 0
+  healthRegenModifier: 0
+  maxHealtPercModifier: 0
   manaPoolModifier: 0
-  attackDamageModifier: 20
+  attackDamageModifier: 0
+  damageReductionModifier: 0
   attackType: 0

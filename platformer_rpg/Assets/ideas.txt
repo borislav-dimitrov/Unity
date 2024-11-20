@@ -13,7 +13,7 @@ VirtualGuy -> Technomancer ->
 
 Ninja Frog -> Brawler ->
 	Abilities:
-		Smash - high damage attack (with cast time) that can also break breakable objects
+		Shockwave - high damage attack (with cast time) that can also break breakable objects
 	Passives:
 		More HP
 		More DMG
@@ -28,6 +28,22 @@ Mask Dude -> Shaman ->
             water elemental - passive health regen to the elemental and the shaman
             earth elemental - passive increasted health to the elemental and the shaman
             air elemental - passive increasted move speed to the elemental and the shaman
+		
+		Summon elemental(control) ->
+			TODOs -> think of normal/passive summon state in the future
+			
+			1. Max allowed distance (from player) -> managed by a trigger area located in the player prefab
+			2. Aggro -> managed by trigger area located in the summon prefab
+			3. Attack range -> managed by trigger area located in the summon prefab
+			3. Movement -> 
+				I. Movement types -> Move to the player object, enemy in ragne or staying idle
+				II. isMoving bool flag -> true when summon is moving
+				III. If moving to player and facing object -> teleport to player
+			4. Movement priorities ->
+				I. No enemy in range -> always follow player
+				II. Enemy in range -> If summon is in max allowed distance (1.) go to or attack the enemy else go to player
+			5. Attack priorities ->
+				I. If enemy in range -> if summon is in max allowed distance
 	Passives:
 		Normal HP
 		Normal move speed
@@ -46,4 +62,8 @@ Pink Man(to be girl) -> Sorceress ->
 		Normal move speed
 		Normal jump
 		Can't attack
-		Utilises mana ->
+		Utilises mana
+
+
+Terminals -> Hackable objects protecting doors/shorcuts/secret areas
+Breakable objects -> Walls that can be broken with the Shockwave spell

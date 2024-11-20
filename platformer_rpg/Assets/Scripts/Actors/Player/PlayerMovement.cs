@@ -29,10 +29,6 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D currentCharacterRB;
     public Animator animator;
 
-    private void Start() {
-
-    }
-
     private void Update() {
         Gravity();
         IsGrounded();

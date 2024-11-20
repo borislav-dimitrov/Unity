@@ -11,18 +11,6 @@ public class PlayerCharactersManager : MonoBehaviour
     public List<GameObject> playableCharacters;
     private GameObject currentCharacter;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void InitializeCurrentCharacter() {
         currentCharacter = playableCharacters[0];
         currentCharacter.GetComponent<BaseClass>().ModifyPlayerStats();

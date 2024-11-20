@@ -16,8 +16,7 @@ public class StatusEffectManager : MonoBehaviour
     private List<Buff> buffsToBeRemoved = new();
 
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         playerStats = GetComponent<PlayerStats>();
     }

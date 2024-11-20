@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Hackable
+  - Spell
+  - Enemy
+  - Breakable
   layers:
   - Default
   - TransparentFX
@@ -12,17 +15,17 @@ TagManager:
   - 
   - Water
   - UI
-  - Actors
+  - 
   - 
   - 
   - Background
   - Ground
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - PlayerSummon
+  - NPC
+  - Enemy
   - 
   - 
   - 
@@ -63,7 +66,16 @@ TagManager:
   - name: Ground
     uniqueID: 1439942057
     locked: 0
-  - name: Actors
+  - name: PlayerSummon
+    uniqueID: 3335504827
+    locked: 0
+  - name: NPC
+    uniqueID: 635987503
+    locked: 0
+  - name: Enemy
+    uniqueID: 1970832661
+    locked: 0
+  - name: Player
     uniqueID: 357539919
     locked: 0
   - name: Spells
